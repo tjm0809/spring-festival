@@ -3,239 +3,742 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025春节祝福</title>
+    <title>2026新春快乐 🐎 马到成功</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            background: linear-gradient(135deg, #1a0000, #3a0000);
-            height: 100vh;
-            overflow: hidden;
-            font-family: 'Microsoft YaHei', 'SimSun', sans-serif;
+            background: linear-gradient(135deg, #0a0a2a 0%, #1a1a40 30%, #2d1b69 100%);
             color: #ffcc00;
+            font-family: 'Microsoft YaHei', 'SimHei', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
             position: relative;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 204, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 100, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 50, 50, 0.1) 0%, transparent 50%);
         }
-
-        /* 烟花背景 */
-        #fireworks {
+        
+        /* 星空背景 */
+        .stars {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
+            z-index: 0;
         }
-
-        /* 祝福文字 */
-        .container {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-        }
-
-        h1 {
-            font-size: 4.5rem;
-            text-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff0000;
-            animation: glow 2s infinite alternate;
-            margin-bottom: 1rem;
-            letter-spacing: 0.3rem;
-            text-align: center;
-        }
-
-        .subtitle {
-            font-size: 2.2rem;
-            color: #ff9900;
-            text-shadow: 0 0 10px #ffcc00;
-            margin-bottom: 2rem;
-            animation: pulse 3s infinite;
-        }
-
-        .message {
-            font-size: 1.8rem;
-            line-height: 1.6;
-            text-align: center;
-            max-width: 80%;
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
-        }
-
-        /* 灯笼效果 */
-        .lantern {
+        
+        .star {
             position: absolute;
-            width: 80px;
-            height: 120px;
-            top: 10%;
-            left: 10%;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .lantern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 40px;
-            background: #ffcc00;
-            border-radius: 2px;
-        }
-
-        .lantern::after {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #ff0000, #ff9900);
+            background-color: white;
             border-radius: 50%;
-            box-shadow: 0 0 20px #ffcc00;
+            animation: twinkle 3s infinite alternate;
         }
-
-        /* 动画效果 */
-        @keyframes glow {
-            0% { text-shadow: 0 0 15px #ff4d4d, 0 0 30px #ff0000; }
-            100% { text-shadow: 0 0 25px #ff6666, 0 0 50px #ff0000; }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
         }
-
-        @keyframes pulse {
-            0% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900; }
-            50% { text-shadow: 0 0 20px #ffcc00, 0 0 40px #ff9900; }
-            100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900; }
+        
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
         }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        /* 点击烟花 */
+        
         .firework {
             position: absolute;
             width: 5px;
             height: 5px;
             border-radius: 50%;
+            box-shadow: 0 0 10px #ff9900;
+            animation: firework-explode 2s infinite;
+        }
+        
+        @keyframes firework-explode {
+            0% { transform: translateY(100vh); opacity: 1; }
+            50% { opacity: 1; box-shadow: 0 0 20px currentColor; }
+            100% { transform: translateY(0) scale(8); opacity: 0; }
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(10, 10, 42, 0.85);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 40px rgba(255, 204, 0, 0.3);
+            border: 3px solid #ff9900;
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(5px);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed #ff9900;
+        }
+        
+        h1 {
+            font-size: 3em;
+            color: #ff9900;
+            text-shadow: 0 0 15px #ff6600, 0 0 30px #ff3300;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            animation: title-glow 2s infinite alternate;
+        }
+        
+        @keyframes title-glow {
+            from { text-shadow: 0 0 15px #ff6600, 0 0 30px #ff3300; }
+            to { text-shadow: 0 0 25px #ff9900, 0 0 50px #ff6600; }
+        }
+        
+        .year-highlight {
+            color: #ff3333;
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #ff3333;
+        }
+        
+        .couplet-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        
+        .couplet {
+            width: 48%;
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.9), rgba(255, 153, 0, 0.9));
+            color: #1a0b2e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            transform: rotate(-2deg);
+            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.4);
+        }
+        
+        .couplet.right {
+            transform: rotate(2deg);
+        }
+        
+        .couplet span {
+            display: block;
+            font-size: 0.8em;
+            color: #444;
+            margin-top: 10px;
+        }
+        
+        .lantern {
+            text-align: center;
+            font-size: 60px;
+            margin: 20px 0;
+            animation: lantern-swing 3s infinite ease-in-out;
+            text-shadow: 0 0 20px #ff9900;
+        }
+        
+        @keyframes lantern-swing {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .message-box {
+            background-color: rgba(255, 204, 0, 0.9);
+            border: 3px solid #ff6600;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            color: #1a0b2e;
+            box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+        }
+        
+        .message-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #ff3300;
+        }
+        
+        .message-list {
+            list-style: none;
+            padding: 10px;
+        }
+        
+        .message-list li {
+            padding: 15px;
+            margin: 15px 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-left: 5px solid #ff6600;
+            border-radius: 0 10px 10px 0;
+            animation: slide-in 1s ease-out;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            font-size: 1.2em;
+        }
+        
+        @keyframes slide-in {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .message-list li:nth-child(1) { animation-delay: 0.5s; }
+        .message-list li:nth-child(2) { animation-delay: 1.5s; }
+        .message-list li:nth-child(3) { animation-delay: 2.5s; }
+        .message-list li:nth-child(4) { animation-delay: 3.5s; }
+        .message-list li:nth-child(5) { animation-delay: 4.5s; }
+        
+        .blessing-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            border: 3px dashed #ff6600;
+        }
+        
+        .blessing-text {
+            font-size: 1.5em;
+            color: #ff3300;
+            font-weight: bold;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+        
+        .red-packet-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
-            animation: explode 1.5s forwards;
+            z-index: 3;
         }
-
-        @keyframes explode {
-            0% { transform: scale(0); opacity: 1; }
-            100% { transform: scale(10); opacity: 0; }
-        }
-
-        /* 倒计时 */
-        .countdown {
+        
+        .red-packet {
             position: absolute;
-            bottom: 2rem;
-            font-size: 1.5rem;
+            font-size: 40px;
+            animation: fall-down 10s infinite linear;
+            text-shadow: 0 0 10px #ff9900;
+        }
+        
+        @keyframes fall-down {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+                text-shadow: 0 0 20px #ff9900;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .controls {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        button {
+            background: linear-gradient(to right, #ff6600, #ff9900);
+            color: #fff;
+            border: none;
+            padding: 18px 35px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 0 10px 15px;
+            transition: all 0.3s;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(255, 102, 0, 0.4);
+            border: 2px solid #ffcc00;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(255, 102, 0, 0.6);
+            background: linear-gradient(to right, #ff9900, #ff6600);
+        }
+        
+        button:active {
+            transform: translateY(2px);
+        }
+        
+        .countdown {
+            font-size: 2.8em;
+            text-align: center;
+            margin: 20px 0;
             color: #ffcc00;
-            text-shadow: 0 0 10px #ff0000;
+            text-shadow: 0 0 15px #ff6600;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            border: 2px solid #ff9900;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 2px solid #ff9900;
+            color: #ffcc00;
+            font-size: 1.3em;
+        }
+        
+        .dragon {
+            font-size: 50px;
+            text-align: center;
+            margin: 20px 0;
+            animation: dragon-move 5s infinite alternate;
+            text-shadow: 0 0 15px #ff9900;
+        }
+        
+        @keyframes dragon-move {
+            0% { transform: translateX(-50px); }
+            100% { transform: translateX(50px); }
+        }
+        
+        .horse {
+            font-size: 60px;
+            text-align: center;
+            margin: 20px 0;
+            animation: horse-gallop 3s infinite alternate;
+            text-shadow: 0 0 20px #ff9900;
+        }
+        
+        @keyframes horse-gallop {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.1); }
+        }
+        
+        /* 音乐控制样式 */
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50px;
+            padding: 10px 20px;
+            color: #ffcc00;
+            border: 2px solid #ff9900;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .music-control:hover {
+            background: rgba(255, 153, 0, 0.3);
+        }
+        
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: 10px;
+        }
+        
+        .volume-slider {
+            width: 80px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .couplet-container {
+                flex-direction: column;
+            }
+            
+            .couplet {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            button {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+            }
+            
+            .music-control {
+                top: 10px;
+                right: 10px;
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="fireworks"></div>
-
+    <!-- 星空背景 -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- 烟花容器 -->
+    <div class="fireworks" id="fireworks"></div>
+    
+    <!-- 红包容器 -->
+    <div class="red-packet-container" id="redPacketContainer"></div>
+    
+    <!-- 音乐控制 -->
+    <div class="music-control" id="musicControl">
+        <span id="musicIcon">🎵</span>
+        <span id="musicText">播放音乐</span>
+        <div class="volume-control">
+            <span>🔊</span>
+            <input type="range" min="0" max="1" step="0.1" value="0.5" class="volume-slider" id="volumeSlider">
+        </div>
+    </div>
+    
+    <!-- 音频元素 -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://tjm0809.github.io/spring-festival/%E5%88%98%E5%BE%B7%E5%8D%8E%20-%20%E6%81%AD%E5%96%9C%E5%8F%91%E8%B4%A2%20(DJ%E7%89%88).mp3" type="audio/mpeg">
+        <!-- <source src="https://assets.mixkit.co/music/preview/mixkit-chinese-new-year-traditional-1151.mp3" type="audio/ogg"> -->
+        您的浏览器不支持音频播放。
+    </audio>
+    
     <div class="container">
-        <h1>恭贺新禧</h1>
-        <div class="subtitle">2025年春节快乐</div>
-        
-        <div class="message">
-            愿你新的一年：  
-            <br>⭐ 事业如烟花般绚烂绽放  
-            <br>⭐ 生活如灯笼般温暖明亮  
-            <br>⭐ 心中有光，脚下有路，万事顺意！
+        <div class="header">
+            <h1>🐎 2026新春快乐 🧧</h1>
+            <p style="font-size: 1.4em; margin-top: 10px;">马到成功 · 万事如意</p>
+            <p class="year-highlight">✨ 2026年农历丙午年 · 马年 ✨</p>
         </div>
         
-        <div class="countdown" id="countdown">距离2025春节还有 <span id="days">365</span> 天</div>
+        <div class="horse">🐎 🐎 🐎</div>
+        <div class="dragon">🐉 🐲 🐉</div>
         
-        <div class="lantern"></div>
-        <div class="lantern" style="right: 10%; top: 15%;"></div>
+        <div class="couplet-container">
+            <div class="couplet">
+                上联：马踏春风迎新岁<br>
+                <span>—— 马年吉祥，春风得意</span>
+            </div>
+            <div class="couplet right">
+                下联：花开夜月庆丰年<br>
+                <span>—— 花开富贵，月圆人圆</span>
+            </div>
+        </div>
+        
+        <div class="lantern">🏮 🏮 🏮</div>
+        
+        <div class="controls">
+            <button onclick="startFireworks()">放烟花庆祝 🎆</button>
+            <button onclick="toggleMusic()">春节音乐 🎵</button>
+            <button onclick="startCountdown()">新年倒计时 ⏳</button>
+            <button onclick="showBlessings()">查看春节祝福 💌</button>
+            <button onclick="sendRedPackets()">发送红包祝福 🧧</button>
+        </div>
+        
+        <div class="countdown" id="countdown"></div>
+        
+        <div class="message-box" id="messageBox" style="display: none;">
+            <h2>🎉 2026马年祝福 🎉</h2>
+            <ul class="message-list" id="messageList">
+                <li>祝您2026马年大吉，马到成功，一马当先！</li>
+                <li>愿您在新的一年里龙马精神，事业如骏马奔腾！</li>
+                <li>祝您阖家幸福，团圆美满，马上有福！</li>
+                <li>愿您财源广进，富贵吉祥，马上有钱！</li>
+                <li>祝您新年新气象，好运连连，心想事成！</li>
+            </ul>
+        </div>
+        
+        <div class="message-box">
+            <h2>📜 马年吉祥寓意 📜</h2>
+            <ul class="message-list">
+                <li><strong>马到成功</strong>：事业顺利，目标快速达成</li>
+                <li><strong>龙马精神</strong>：精力充沛，活力满满</li>
+                <li><strong>一马当先</strong>：勇往直前，领先他人</li>
+                <li><strong>万马奔腾</strong>：气势磅礴，兴旺发达</li>
+                <li><strong>马上有福</strong>：福气马上到来，好运连连</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>辞旧迎新，福满人间</p>
+            <p style="font-size: 1.5em; margin-top: 15px;">2026新春大吉，马到成功！ 🐎🧧🎊</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">夜空中的烟花，照亮新年的希望与梦想</p>
+        </div>
     </div>
 
     <script>
-        // 创建烟花效果
-        function createFirework(x, y) {
-            const fireworks = document.getElementById('fireworks');
-            const colors = ['#ff0000', '#ff9900', '#ffff00', '#00ff00', '#0000ff'];
-            const startTime = Date.now(); // ✅ 修复：在函数内部声明startTime
+        // 创建星空
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            starsContainer.innerHTML = '';
             
-            for (let i = 0; i < 50; i++) {
-                const firework = document.createElement('div');
-                firework.className = 'firework';
-                firework.style.left = `${x}px`;
-                firework.style.top = `${y}px`;
-                firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                
-                // 随机大小和角度
-                const size = Math.random() * 5 + 2;
-                firework.style.width = `${size}px`;
-                firework.style.height = `${size}px`;
-                
-                // 随机运动方向
-                const angle = Math.random() * Math.PI * 2;
-                const speed = Math.random() * 10 + 5;
-                const vx = Math.cos(angle) * speed;
-                const vy = Math.sin(angle) * speed;
-                
-                // 添加到页面
-                fireworks.appendChild(firework);
-                
-                // 动画效果
-                let posX = x;
-                let posY = y;
-                const interval = setInterval(() => {
-                    posX += vx;
-                    posY += vy;
-                    firework.style.left = `${posX}px`;
-                    firework.style.top = `${posY}px`;
-                    firework.style.opacity = 1 - (Date.now() - startTime) / 1000;
-                    
-                    if (Date.now() - startTime > 1000) {
-                        clearInterval(interval);
-                        firework.remove();
-                    }
-                }, 16);
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.opacity = Math.random() * 0.7 + 0.3;
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.animationDuration = Math.random() * 4 + 2 + 's';
+                starsContainer.appendChild(star);
             }
         }
-
-        // 点击屏幕触发烟花
-        document.body.addEventListener('click', (e) => {
-            createFirework(e.clientX, e.clientY);
-        });
-
-        // 简单倒计时（模拟）
-        let days = 365;
-        setInterval(() => {
-            days--;
-            document.getElementById('days').textContent = days;
-            if (days <= 0) {
-                document.getElementById('days').textContent = '0';
+        
+        // 烟花效果
+        function startFireworks() {
+            const fireworksContainer = document.getElementById('fireworks');
+            fireworksContainer.innerHTML = '';
+            
+            for (let i = 0; i < 40; i++) {
+                setTimeout(() => {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = Math.random() * 100 + 'vw';
+                    firework.style.backgroundColor = getRandomFireworkColor();
+                    firework.style.color = firework.style.backgroundColor;
+                    firework.style.boxShadow = `0 0 15px ${firework.style.backgroundColor}`;
+                    firework.style.animationDelay = Math.random() * 1 + 's';
+                    firework.style.animationDuration = Math.random() * 1 + 1.5 + 's';
+                    fireworksContainer.appendChild(firework);
+                    
+                    // 烟花结束后移除
+                    setTimeout(() => {
+                        if (firework.parentNode === fireworksContainer) {
+                            firework.remove();
+                        }
+                    }, 2000);
+                }, i * 150);
             }
-        }, 24 * 60 * 60 * 1000);
-
-        // 页面加载时自动触发烟花
-        window.onload = () => {
+            
+            // 播放烟花音效
+            playFireworkSound();
+        }
+        
+        // 随机烟花颜色
+        function getRandomFireworkColor() {
+            const colors = ['#ff9900', '#ff6600', '#ff3333', '#ffcc00', '#4CAF50', '#2196F3'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        // 随机颜色生成
+        function getRandomColor() {
+            const colors = ['#ffcc00', '#ff9900', '#ff6600', '#4CAF50', '#2196F3'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        // 新年倒计时
+        function startCountdown() {
+            const countdownEl = document.getElementById('countdown');
+            countdownEl.innerHTML = "新年倒计时开始...<br>";
+            
+            let count = 10;
+            const countdownInterval = setInterval(() => {
+                if (count > 0) {
+                    countdownEl.innerHTML += ` ${count}... `;
+                    // 每倒数一次添加一个烟花
+                    if (count <= 5) {
+                        addSingleFirework();
+                    }
+                    count--;
+                } else {
+                    clearInterval(countdownInterval);
+                    countdownEl.innerHTML = "🎉 2026新年快乐！ 🎉<br>马到成功，万事如意！";
+                    // 大规模烟花庆祝
+                    startFireworks();
+                    sendRedPackets();
+                }
+            }, 800);
+        }
+        
+        // 单个烟花
+        function addSingleFirework() {
+            const fireworksContainer = document.getElementById('fireworks');
+            const firework = document.createElement('div');
+            firework.className = 'firework';
+            firework.style.left = Math.random() * 100 + 'vw';
+            firework.style.backgroundColor = getRandomFireworkColor();
+            firework.style.boxShadow = `0 0 15px ${firework.style.backgroundColor}`;
+            firework.style.animationDuration = '1.5s';
+            fireworksContainer.appendChild(firework);
+            
             setTimeout(() => {
-                createFirework(window.innerWidth / 2, window.innerHeight / 2);
-            }, 500);
+                if (firework.parentNode === fireworksContainer) {
+                    firework.remove();
+                }
+            }, 1500);
+        }
+        
+        // 显示祝福语
+        function showBlessings() {
+            const messageBox = document.getElementById('messageBox');
+            const messageList = document.getElementById('messageList');
+            
+            // 显示消息框
+            messageBox.style.display = 'block';
+            
+            // 重置动画
+            const messages = messageList.querySelectorAll('li');
+            messages.forEach((msg, index) => {
+                msg.style.animation = 'none';
+                setTimeout(() => {
+                    msg.style.animation = `slide-in 1s ease-out ${index * 1 + 0.5}s forwards`;
+                }, 10);
+            });
+            
+            // 滚动到消息区域
+            messageBox.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // 发红包效果
+        function sendRedPackets() {
+            const container = document.getElementById('redPacketContainer');
+            const redPacketCount = 20;
+            
+            for (let i = 0; i < redPacketCount; i++) {
+                setTimeout(() => {
+                    const redPacket = document.createElement('div');
+                    redPacket.className = 'red-packet';
+                    redPacket.innerHTML = '🧧';
+                    redPacket.style.left = Math.random() * 100 + 'vw';
+                    redPacket.style.fontSize = (Math.random() * 40 + 30) + 'px';
+                    redPacket.style.animationDuration = (Math.random() * 6 + 4) + 's';
+                    redPacket.style.animationDelay = Math.random() * 2 + 's';
+                    container.appendChild(redPacket);
+                    
+                    // 动画结束后移除
+                    setTimeout(() => {
+                        if (redPacket.parentNode === container) {
+                            redPacket.remove();
+                        }
+                    }, 12000);
+                }, i * 250);
+            }
+        }
+        
+        // 音乐控制
+        const bgMusic = document.getElementById('bgMusic');
+        const musicIcon = document.getElementById('musicIcon');
+        const musicText = document.getElementById('musicText');
+        const volumeSlider = document.getElementById('volumeSlider');
+        let isMusicPlaying = true;
+        
+        function toggleMusic() {
+            if (bgMusic.paused) {
+                bgMusic.play().then(() => {
+                    musicIcon.textContent = '🎶';
+                    musicText.textContent = '暂停音乐';
+                    isMusicPlaying = true;
+                }).catch(e => {
+                    console.log("播放被浏览器拦截，需要用户手动点击", e);
+                    musicText.textContent = '点击播放音乐';
+                });
+            } else {
+                bgMusic.pause();
+                musicIcon.textContent = '🎵';
+                musicText.textContent = '播放音乐';
+                isMusicPlaying = false;
+            }
+        }
+        
+        // 音量控制
+        volumeSlider.addEventListener('input', function() {
+            bgMusic.volume = this.value;
+        });
+        
+        // 烟花音效
+        function playFireworkSound() {
+            try {
+                const fireworkSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-fireworks-show-audio-3038.mp3');
+                fireworkSound.volume = 0.3;
+                fireworkSound.play();
+            } catch(e) {
+                console.log("烟花音效播放失败");
+            }
+        }
+        
+        // 自动播放背景音乐（需要用户交互）
+        document.addEventListener('click', function initMusic() {
+            bgMusic.volume = 0.5;
+            volumeSlider.value = 0.5;
+            document.removeEventListener('click', initMusic);
+        });
+        
+        // 页面加载时的初始化
+        window.onload = function() {
+            // 创建星空
+            createStars();
+            
+            // 开始一些初始烟花
+            setTimeout(startFireworks, 1000);
+            
+            // 每20秒自动放一些烟花
+            setInterval(() => {
+                if (Math.random() > 0.7) {
+                    addSingleFirework();
+                }
+            }, 20000);
+            
+            // 每30秒自动发一些红包
+            setInterval(() => {
+                if (Math.random() > 0.8) {
+                    sendRedPackets();
+                }
+            }, 30000);
+            
+            // 自动显示祝福（延迟3秒）
+            setTimeout(() => {
+                showBlessings();
+            }, 3000);
         };
+        
+        // 键盘快捷键
+        document.addEventListener('keydown', function(event) {
+            // 按F键放烟花
+            if (event.key === 'f' || event.key === 'F') {
+                startFireworks();
+            }
+            // 按M键切换音乐
+            if (event.key === 'm' || event.key === 'M') {
+                toggleMusic();
+            }
+            // 按C键开始倒计时
+            if (event.key === 'c' || event.key === 'C') {
+                startCountdown();
+            }
+            // 按B键显示祝福
+            if (event.key === 'b' || event.key === 'B') {
+                showBlessings();
+            }
+            // 按R键发红包
+            if (event.key === 'r' || event.key === 'R') {
+                sendRedPackets();
+            }
+        });
     </script>
 </body>
 </html>
